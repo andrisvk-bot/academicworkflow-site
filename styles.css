@@ -26,10 +26,6 @@
 *{ box-sizing: border-box; }
 html, body{ height: 100%; }
 
-
-
-/* Keep content from hiding under the fixed menu */
-body{ padding-top: 84px; }
 body{
   margin: 0;
   font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
@@ -48,10 +44,7 @@ a:hover{ text-decoration: underline; }
 
 /* Header */
 .header{
-  left: 0;
-  right: 0;
-  width: 100%;
-position: fixed;
+  position: sticky;
   top: 0;
   z-index: 50;
   background: rgba(246,249,252,0.86);
@@ -429,24 +422,48 @@ position: fixed;
   border: 1px solid #e2e8f0;
 }
 
-/* Steps list formatting fix (How it works section) */
+/* Top menu – bigger and black */
+.nav__link{
+  font-size: 16px;
+  font-weight: 600;
+  color: #000000;
+  padding: 8px 10px;
+  border-radius: 10px;
+}
+
+/* Pricing add-on (styled, subtle) */
+.price__addon{
+  margin: 10px 0 14px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: rgba(37,99,235,0.06);
+  border: 1px solid rgba(37,99,235,0.12);
+  color: var(--muted);
+  font-size: 13px;
+}
+
+/* How it works – clean two-column alignment */
 .steps{
   margin: 0;
   padding-left: 18px;
-  color: var(--muted);
-  line-height: 1.7;
+  display: grid;
+  gap: 10px;
+  max-width: 72ch;
 }
 .steps li{
-  margin: 12px 0;
+  margin: 0;
   display: grid;
   grid-template-columns: 160px 1fr;
-  column-gap: var(--pad-16);
+  column-gap: 16px;
   align-items: start;
+  color: var(--muted);
+  font-size: 15px;
 }
 .steps li strong{
   color: var(--text);
   font-weight: 700;
   display: block;
+  min-width: 0;
 }
 .steps li span{
   color: var(--muted);
@@ -459,9 +476,37 @@ position: fixed;
   }
 }
 
-/* Menu text adjustment */
-.nav__link{
-  font-size: 16px;
-  color: #000000;
-  font-weight: 600;
+/* Hero H1 wrap control */
+.h1{
+  text-wrap: balance;
+  hyphens: none;
+  max-width: 22ch;
+}
+
+/* Process section – compact card layout */
+#process.section{
+  padding: 42px 0;
+}
+#process .process__card{
+  padding: 18px;
+  max-width: 780px;
+  margin: 0 auto;
+}
+#process .process__title{
+  margin: 0 0 14px;
+}
+#process .steps{
+  max-width: 100%;
+}
+#process .steps li{
+  grid-template-columns: 150px 1fr;
+}
+#process .center--tight{
+  margin-top: 14px;
+}
+
+/* Intensive subhead – force single line */
+#intensive .subhead{
+  white-space: nowrap;
+  max-width: 100%;
 }
