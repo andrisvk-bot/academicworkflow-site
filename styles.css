@@ -505,12 +505,16 @@ a:hover{ text-decoration: underline; }
   margin-top: 14px;
 }
 
-/* Intensive subhead – force single line */
+/* Intensive subhead – one line on desktop, wraps on mobile */
 #intensive .subhead{
   white-space: nowrap;
-  max-width: 100%;
 }
 
+@media (max-width: 768px){
+  #intensive .subhead{
+    white-space: normal;
+  }
+}
 /* === PATCH: Header always fixed to top === */
 .header{
   position: fixed;
@@ -523,4 +527,28 @@ a:hover{ text-decoration: underline; }
 /* Prevent content sliding under the fixed header */
 main{
   padding-top: 72px;
+}
+
+/* Mobile header compaction */
+@media (max-width: 520px){
+  .header__inner{
+    padding: 10px 0;
+    gap: 12px;
+  }
+  .brand__tagline{
+    display: none;
+  }
+  .brand__mark{
+    width: 34px;
+    height: 34px;
+    border-radius: 11px;
+  }
+  .btn--small{
+    padding: 9px 12px;
+    font-size: 13px;
+  }
+  /* If the fixed header becomes taller, ensure content never sits underneath */
+  main{
+    padding-top: 86px;
+  }
 }
