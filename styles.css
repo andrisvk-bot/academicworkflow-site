@@ -476,37 +476,13 @@ a:hover{ text-decoration: underline; }
   }
 }
 
-/* Hero H1 wrap control */
-.h1{
-  text-wrap: balance;
-  hyphens: none;
-  max-width: 22ch;
-}
-
-/* Process section – compact card layout */
-#process.section{
-  padding: 42px 0;
-}
-#process .process__card{
-  padding: 18px;
-  max-width: 780px;
-  margin: 0 auto;
-}
-#process .process__title{
-  margin: 0 0 14px;
-}
-#process .steps{
-  max-width: 100%;
-}
-#process .steps li{
-  grid-template-columns: 150px 1fr;
-}
-#process .center--tight{
-  margin-top: 14px;
-}
-
-/* Intensive subhead – force single line */
+/* Intensive subhead – one line on desktop, wraps on mobile */
 #intensive .subhead{
   white-space: nowrap;
-  max-width: 100%;
+}
+
+@media (max-width: 768px){
+  #intensive .subhead{
+    white-space: normal;
+  }
 }
