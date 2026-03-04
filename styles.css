@@ -60,7 +60,8 @@ a:hover{ text-decoration: underline; }
   display: flex;
   align-items: center;
   gap: 12px;
-  min-width: 220px;
+  min-width: auto; /* Changed from 220px to auto */
+  flex-shrink: 1; /* Allow shrinking */
 }
 
 .brand__mark{
@@ -87,18 +88,22 @@ a:hover{ text-decoration: underline; }
   font-weight: 700;
   font-size: 18px;
   line-height: 1.1;
+  white-space: nowrap;
 }
 
 .brand__tagline{
   font-size: 12px;
   color: var(--muted);
   line-height: 1.2;
+  white-space: nowrap;
 }
 
 .nav{
   display: flex;
   align-items: center;
   gap: 18px;
+  flex-wrap: wrap; /* Allow wrapping on small screens */
+  justify-content: center;
 }
 
 .nav__link{
@@ -118,6 +123,7 @@ a:hover{ text-decoration: underline; }
 
 .header__cta{
   text-decoration: none;
+  flex-shrink: 0; /* Prevent CTA from shrinking */
 }
 
 /* Buttons */
@@ -432,77 +438,37 @@ html{
   scroll-padding-top: 80px;
 }
 
-/* ===== MOBILE FIXES - ONLY AFFECT SCREENS BELOW 920px ===== */
+/* Mobile fixes - minimal and targeted */
 @media screen and (max-width: 920px) {
-  /* Header fixes for mobile */
-  .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-  }
-  
-  .header__inner {
-    flex-wrap: wrap;
-    padding: 10px 0;
-  }
-  
-  /* First row: brand + CTA */
-  .brand {
-    order: 1;
-    min-width: auto;
-    flex: 1 1 auto;
-  }
-  
-  .header__cta {
-    order: 2;
-    margin-left: auto;
-  }
-  
-  /* Second row: navigation */
   .nav {
-    order: 3;
-    display: flex !important;
-    width: 100%;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-top: 8px;
-    padding-top: 8px;
-    border-top: 1px solid var(--border);
+    gap: 12px; /* Slightly smaller gap on mobile */
   }
   
   .nav__link {
-    font-size: 14px;
-    padding: 6px 12px;
-    background: #f1f5f9;
-    border-radius: 30px;
-    border: 1px solid var(--border);
+    font-size: 15px; /* Slightly smaller font */
+    padding: 6px 8px;
   }
   
   .brand__tagline {
-    display: none;
+    display: none; /* Hide tagline on mobile to save space */
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .header__inner {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
   }
   
-  .brand__name {
-    font-size: 16px;
-  }
-  
-  main {
-    padding-top: 100px;
+  .nav {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    margin-top: 5px;
   }
   
   .hero__grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .h1 {
-    font-size: 40px;
-    max-width: 100%;
-  }
-  
-  .grid--2 {
     grid-template-columns: 1fr;
   }
   
@@ -513,26 +479,11 @@ html{
 
 @media screen and (max-width: 520px) {
   .h1 {
-    font-size: 34px;
+    font-size: 36px;
   }
   
-  .brand__name {
+  .nav__link {
     font-size: 14px;
-  }
-  
-  .nav__link {
-    font-size: 13px;
-    padding: 5px 10px;
-  }
-  
-  main {
-    padding-top: 110px;
-  }
-}
-
-@media screen and (max-width: 380px) {
-  .nav__link {
-    font-size: 12px;
-    padding: 4px 8px;
+    padding: 5px 6px;
   }
 }
