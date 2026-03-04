@@ -614,7 +614,13 @@ html{
   scroll-padding-top: 110px;
 }
 
-/* PATCH: hide nav on mobile/desktop-site to prevent long menu */
+/* PATCH V2: stop long menu on mobile reliably */
 @media (max-width: 1100px){
-  .nav{ display: none; }
+  /* Prevent header overflow even if the phone uses "Desktop site" */
+  .header__inner{ flex-wrap: wrap; row-gap: 10px; }
+  .brand{ min-width: 0; }
+  /* Force-hide the long nav row (your design currently has no mobile menu) */
+  .nav{ display: none !important; }
+  /* Keep CTA compact */
+  .header__cta{ white-space: nowrap; }
 }
