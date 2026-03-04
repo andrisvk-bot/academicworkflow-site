@@ -557,24 +557,6 @@ main{
   }
 }
 
-  .brand__tagline{
-    display: none;
-  }
-  .brand__mark{
-    width: 34px;
-    height: 34px;
-    border-radius: 11px;
-  }
-  .btn--small{
-    padding: 9px 12px;
-    font-size: 13px;
-  }
-  /* If the fixed header becomes taller, ensure content never sits underneath */
-  main{
-    padding-top: 86px;
-  }
-}
-
 /* === PATCH: Header branding balance (logo larger, text smaller) === */
 .brand__logo{
   width: 44px;
