@@ -552,6 +552,7 @@ main{
     padding-top: 86px;
   }
 }
+<<<<<<< HEAD
 
 /* === PATCH: Header branding balance (logo larger, text smaller) === */
 .brand__logo{
@@ -586,3 +587,5 @@ main{
   font-size: 18px;
   line-height: 1.1;
 }
+=======
+>>>>>>> c0789bf0f6f53eaf15046b64d28f2681299d2a0f
