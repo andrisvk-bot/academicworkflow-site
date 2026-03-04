@@ -532,9 +532,31 @@ main{
 /* Mobile header compaction */
 @media (max-width: 520px){
   .header__inner{
-    padding: 10px 0;
-    gap: 12px;
+    padding: 8px 0;
+    gap: 10px;
   }
+  .brand__tagline{
+    display: none;
+  }
+  .brand__name{
+    font-size: 15px;
+    line-height: 1.1;
+  }
+  .brand__mark{
+    width: 30px;
+    height: 30px;
+    border-radius: 10px;
+  }
+  .btn--small{
+    padding: 8px 10px;
+    font-size: 13px;
+  }
+  /* Keep content aligned with a shorter mobile header */
+  main{
+    padding-top: 72px;
+  }
+}
+
   .brand__tagline{
     display: none;
   }
@@ -600,7 +622,7 @@ main{
 }
 @media (max-width: 520px){
   .brand__mark{
-    flex-basis: 34px;
+    flex-basis: 30px;
   }
 }
 

@@ -184,25 +184,52 @@
   <div class="container">
     <h2 class="h2">How it works</h2>
 
+    <style>
+      /* Process section formatting (scoped) */
+      #process .aw-process{display:flex;flex-direction:column;gap:18px;}
+      #process .aw-row{display:grid;grid-template-columns:190px 1fr;gap:22px;align-items:start;}
+      #process .aw-label{font-weight:700;color:#0f172a;}
+      #process .aw-main{margin:0;line-height:1.45;}
+      #process .aw-sub{margin:6px 0 0;line-height:1.45;opacity:.85;}
+      @media (max-width: 720px){
+        #process .aw-row{grid-template-columns:1fr;gap:8px;}
+      }
+    </style>
+
     <div class="card" style="padding: 18px;">
-      <ol class="steps">
-        <li>
-          <strong>Apply</strong>
-          <span>Tell us your course, assignment type, deadline, and what feels slow or confusing. Include your brief or marking rubric if available.</span>
-        </li>
-        <li>
-          <strong>Approval</strong>
-          <span>If it is a good fit, you receive a PayPal payment link and several session time options, plus a short checklist of what to prepare.</span>
-        </li>
-        <li>
-          <strong>Intensive session</strong>
-          <span>We build your workflow using your real assignment brief. You leave with a clear structure, a research filtering method, and a reusable paragraph system.</span>
-        </li>
-        <li>
-          <strong>Optional support</strong>
-          <span>Optional: two weeks of guided implementation support with short check-ins and feedback to keep your work aligned with the rubric.</span>
-        </li>
-      </ol>
+      <div class="aw-process">
+        <div class="aw-row">
+          <div class="aw-label">Apply</div>
+          <div class="aw-text">
+            <p class="aw-main">Tell us your course, assignment brief, deadline, and where you are stuck.</p>
+            <p class="aw-sub">If possible, include the marking rubric so the workflow targets what earns marks from the start.</p>
+          </div>
+        </div>
+
+        <div class="aw-row">
+          <div class="aw-label">Approval</div>
+          <div class="aw-text">
+            <p class="aw-main">Applications are reviewed to confirm fit and keep the service ethical and useful.</p>
+            <p class="aw-sub">If accepted, you receive a PayPal payment link, several session time options, and a short preparation checklist.</p>
+          </div>
+        </div>
+
+        <div class="aw-row">
+          <div class="aw-label">Intensive session</div>
+          <div class="aw-text">
+            <p class="aw-main">During the session we convert your real assignment brief into a structured workflow.</p>
+            <p class="aw-sub">You leave with a clear argument blueprint, a fast research filtering system, and a method that allows you to complete assignments at least five times faster while maintaining analytical depth.</p>
+          </div>
+        </div>
+
+        <div class="aw-row">
+          <div class="aw-label">Optional support</div>
+          <div class="aw-text">
+            <p class="aw-main">Optional: two weeks of implementation support to help you finish the assignment with momentum.</p>
+            <p class="aw-sub">Short check-ins and quick feedback keep your structure, evidence, and analysis aligned to the marking criteria.</p>
+          </div>
+        </div>
+      </div>
 
       <div class="center">
         <a class="btn btn--primary btn--large" href="https://forms.gle/aN59bVpH9dw2Zw347" target="_blank" rel="noopener">Apply now</a>
@@ -211,7 +238,7 @@
   </div>
 </section>
 
-    <section class="section" id="ethics">
+<section class="section" id="ethics">
       <div class="container">
         <h2 class="h2">Ethics and academic conduct</h2>
         <p class="subhead">This service develops your reasoning process. It does not replace your authorship.</p>
