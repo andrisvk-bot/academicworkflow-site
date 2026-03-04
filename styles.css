@@ -32,7 +32,6 @@ body{
   color: var(--text);
   background: var(--bg);
   line-height: 1.6;
-  overflow-x: hidden;
 }
 
 a{ color: inherit; text-decoration: none; }
@@ -614,36 +613,30 @@ html{
   scroll-padding-top: 110px;
 }
 
-/* PATCH V4: responsive header wrap for phone + desktop-site */
+/* PATCH V5: mobile header ordering to prevent clipped nav */
 @media (max-width: 1100px){
-  /* allow the header row to wrap instead of forcing horizontal overflow */
   .header__inner{
-    flex-wrap: wrap;
-    row-gap: 10px;
+    justify-content: flex-start !important;
   }
-
-  /* remove fixed minimum that can force overflow */
   .brand{
-    min-width: 0;
+    order: 1;
   }
-
-  /* keep nav visible but wrap into multiple lines */
-  .nav{
-    display: flex !important;
-    width: 100%;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 12px;
-  }
-
-  /* slightly tighter link padding so it fits */
-  .nav__link{
-    padding: 6px 8px;
-  }
-
-  /* keep CTA on the right when possible */
   .header__cta{
-    margin-left: auto;
-    white-space: nowrap;
+    order: 2;
+    margin-left: auto !important;
+  }
+  .nav{
+    order: 3;
+    width: 100% !important;
+    justify-content: center !important;
+  }
+}
+@media (max-width: 520px){
+  .nav{
+    gap: 10px !important;
+  }
+  .nav__link{
+    font-size: 14px !important;
+    padding: 6px 6px !important;
   }
 }
