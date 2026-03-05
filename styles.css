@@ -544,9 +544,9 @@ html{
     font-size: 16px !important;
   }
   
-  /* Hero section fixes */
+  /* Hero section fixes - REDUCED TOP PADDING */
   .hero {
-    padding: 60px 0 30px !important;
+    padding: 30px 0 30px !important;
     width: 100% !important;
     overflow: hidden !important;
   }
@@ -577,9 +577,9 @@ html{
     top: -150px !important;
   }
   
-  /* Main content padding */
+  /* Main content padding - SINGLE SOURCE OF TRUTH */
   main {
-    padding-top: 100px !important;
+    padding-top: 80px !important;
   }
   
   /* Fix all sections */
@@ -641,8 +641,14 @@ html{
     width: 100% !important;
   }
   
+  /* Hero padding for small mobile */
+  .hero {
+    padding: 25px 0 25px !important;
+  }
+  
+  /* Main padding for small mobile */
   main {
-    padding-top: 110px !important;
+    padding-top: 85px !important;
   }
 }
 
@@ -661,13 +667,24 @@ html{
     font-size: 12px !important;
     padding: 4px 6px !important;
   }
+  
+  /* Hero padding for extra small mobile */
+  .hero {
+    padding: 20px 0 20px !important;
+  }
+  
+  /* Main padding for extra small mobile */
+  main {
+    padding-top: 90px !important;
+  }
 }
+
 /* ===== TEXT FORMATTING IMPROVEMENTS ===== */
 /* These improvements enhance readability without breaking the stable layout */
 
 /* Better heading hierarchy */
 .h1 {
-  text-wrap: balance; /* Prevents awkward word breaks */
+  text-wrap: balance;
 }
 
 .h2 {
@@ -770,11 +787,7 @@ html{
     margin-bottom: 20px;
   }
   
-  /* Reduce empty space */
-  .hero {
-    padding: 50px 0 25px !important;
-  }
-  
+  /* Section spacing */
   .section {
     padding: 40px 0;
   }
@@ -872,10 +885,6 @@ html{
     font-size: 26px;
   }
   
-  .hero {
-    padding: 40px 0 20px !important;
-  }
-  
   .section {
     padding: 30px 0;
   }
@@ -943,14 +952,13 @@ html{
   line-height: 1.5;
   color: var(--muted);
 }
-/* Add this to the VERY END of your styles.css */
 
 /* ===== FIX SCROLL POSITION FOR STICKY HEADER ===== */
 
 /* Universal fix for all anchor links */
 html {
-  scroll-padding-top: 90px; /* Creates space at top when scrolling to anchors */
-  scroll-behavior: smooth; /* Optional: adds smooth scrolling */
+  scroll-padding-top: 90px;
+  scroll-behavior: smooth;
 }
 
 /* More specific fixes for each section */
@@ -960,13 +968,13 @@ html {
 #ethics,
 #skills,
 #tools {
-  scroll-margin-top: 90px; /* Alternative method for browsers that support it */
+  scroll-margin-top: 90px;
 }
 
 /* Mobile adjustment - header is taller on mobile */
 @media screen and (max-width: 920px) {
   html {
-    scroll-padding-top: 120px; /* More space for two-row mobile header */
+    scroll-padding-top: 100px;
   }
   
   #intensive,
@@ -975,14 +983,14 @@ html {
   #ethics,
   #skills,
   #tools {
-    scroll-margin-top: 120px;
+    scroll-margin-top: 100px;
   }
 }
 
 /* Small mobile adjustment */
 @media screen and (max-width: 520px) {
   html {
-    scroll-padding-top: 130px; /* Even more space for very small screens */
+    scroll-padding-top: 110px;
   }
   
   #intensive,
@@ -991,53 +999,6 @@ html {
   #ethics,
   #skills,
   #tools {
-    scroll-margin-top: 130px;
-  }
-}
-
-/* Optional: Add visual indicator that section is scrolled to */
-#intensive:target,
-#pricing:target,
-#process:target,
-#ethics:target,
-#skills:target,
-#tools:target {
-  transition: background-color 0.5s ease;
-}
-/* Add this to the VERY END of your styles.css */
-
-/* ===== FIX MOBILE HEADER SPACING ===== */
-
-/* Reduce top padding on mobile */
-@media screen and (max-width: 920px) {
-  /* Reduce hero top padding */
-  .hero {
-    padding-top: 30px !important; /* Was 60px, reduced to 30px */
-  }
-  
-  /* Adjust main padding to match */
-  main {
-    padding-top: 90px !important; /* Fine-tune this value */
-  }
-  
-  /* Even smaller screens */
-  @media screen and (max-width: 520px) {
-    .hero {
-      padding-top: 25px !important;
-    }
-    
-    main {
-      padding-top: 100px !important;
-    }
-  }
-  
-  @media screen and (max-width: 380px) {
-    .hero {
-      padding-top: 20px !important;
-    }
-    
-    main {
-      padding-top: 110px !important;
-    }
+    scroll-margin-top: 110px;
   }
 }
