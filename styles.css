@@ -662,3 +662,284 @@ html{
     padding: 4px 6px !important;
   }
 }
+/* ===== TEXT FORMATTING IMPROVEMENTS ===== */
+/* These improvements enhance readability without breaking the stable layout */
+
+/* Better heading hierarchy */
+.h1 {
+  text-wrap: balance; /* Prevents awkward word breaks */
+}
+
+.h2 {
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.h3 {
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+}
+
+/* Improved paragraph readability */
+.lead, p {
+  line-height: 1.6;
+}
+
+/* Desktop improvements */
+@media screen and (min-width: 921px) {
+  /* Better hero text spacing */
+  .hero__copy {
+    max-width: 600px;
+  }
+  
+  .h1 {
+    font-size: 52px;
+    margin-bottom: 20px;
+    max-width: 700px;
+  }
+  
+  .lead {
+    font-size: 18px;
+    margin-bottom: 24px;
+    max-width: 550px;
+  }
+  
+  /* Better pricing card balance */
+  .card--price {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .card--price .price__top {
+    margin-bottom: 16px;
+  }
+  
+  .card--price .bullets {
+    flex-grow: 1;
+    margin-bottom: 16px;
+  }
+  
+  /* Process section improvements */
+  #process .aw-row {
+    margin-bottom: 4px;
+  }
+  
+  #process .aw-main {
+    font-size: 16px;
+  }
+  
+  #process .aw-sub {
+    font-size: 15px;
+    opacity: 0.75;
+  }
+  
+  /* Better tag list spacing */
+  .tag-list {
+    gap: 12px;
+  }
+  
+  .tag {
+    padding: 8px 18px;
+    font-size: 14px;
+  }
+}
+
+/* Mobile text improvements - subtle changes only */
+@media screen and (max-width: 920px) {
+  /* Better mobile typography */
+  .h1 {
+    font-size: 36px !important;
+    line-height: 1.1;
+    margin-bottom: 16px;
+    max-width: 100%;
+  }
+  
+  .h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+  
+  .h3 {
+    font-size: 18px;
+  }
+  
+  .lead {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+  
+  /* Reduce empty space */
+  .hero {
+    padding: 50px 0 25px !important;
+  }
+  
+  .section {
+    padding: 40px 0;
+  }
+  
+  .hero__buttons {
+    margin-bottom: 12px;
+  }
+  
+  .trust {
+    font-size: 14px;
+    line-height: 1.4;
+    margin-bottom: 10px;
+  }
+  
+  /* Better card spacing on mobile */
+  .card {
+    padding: 18px;
+  }
+  
+  .card--price {
+    margin-bottom: 0;
+  }
+  
+  .price__top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  
+  .price {
+    font-size: 28px;
+  }
+  
+  /* Process section mobile improvements */
+  #process .aw-row {
+    gap: 4px !important;
+    margin-bottom: 16px;
+  }
+  
+  #process .aw-label {
+    font-size: 18px;
+    margin-bottom: 4px;
+  }
+  
+  #process .aw-main {
+    font-size: 15px;
+    margin-bottom: 4px;
+  }
+  
+  #process .aw-sub {
+    font-size: 14px;
+    opacity: 0.75;
+  }
+  
+  /* Better bullet lists on mobile */
+  .bullets {
+    padding-left: 18px;
+  }
+  
+  .bullets li {
+    font-size: 15px;
+    margin-bottom: 8px;
+    line-height: 1.4;
+  }
+  
+  /* Tag list improvements */
+  .tag-list {
+    gap: 8px;
+  }
+  
+  .tag {
+    padding: 6px 14px;
+    font-size: 13px;
+  }
+  
+  /* Footer improvements */
+  .footer__inner {
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+  }
+  
+  .footer__links {
+    justify-content: center;
+  }
+}
+
+/* Small mobile fine-tuning */
+@media screen and (max-width: 480px) {
+  .h1 {
+    font-size: 32px !important;
+  }
+  
+  .h2 {
+    font-size: 26px;
+  }
+  
+  .hero {
+    padding: 40px 0 20px !important;
+  }
+  
+  .section {
+    padding: 30px 0;
+  }
+  
+  .card {
+    padding: 16px;
+  }
+  
+  .bullets li {
+    font-size: 14px;
+  }
+  
+  .btn {
+    padding: 12px 16px;
+    font-size: 14px;
+  }
+  
+  /* Tighter spacing for very small screens */
+  .hero__buttons {
+    gap: 8px;
+  }
+  
+  .tag {
+    padding: 5px 12px;
+    font-size: 12px;
+  }
+}
+
+/* Fix for "5 times faster" text on desktop */
+@media screen and (min-width: 921px) and (max-width: 1100px) {
+  .h1 {
+    font-size: 44px;
+    white-space: nowrap;
+  }
+}
+
+@media screen and (min-width: 1101px) and (max-width: 1300px) {
+  .h1 {
+    font-size: 48px;
+    white-space: nowrap;
+  }
+}
+
+/* Improve button text */
+.btn {
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+/* Better link hover states */
+.nav__link {
+  transition: all 0.2s ease;
+}
+
+/* Improve panel note readability */
+.panel__note {
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--muted);
+}
+
+/* Fine print improvements */
+.fineprint {
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--muted);
+}
