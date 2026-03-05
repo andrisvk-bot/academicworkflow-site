@@ -913,21 +913,6 @@ html{
   }
 }
 
-/* Fix for "5 times faster" text on desktop */
-@media screen and (min-width: 921px) and (max-width: 1100px) {
-  .h1 {
-    font-size: 44px;
-    white-space: nowrap;
-  }
-}
-
-@media screen and (min-width: 1101px) and (max-width: 1300px) {
-  .h1 {
-    font-size: 48px;
-    white-space: nowrap;
-  }
-}
-
 /* Improve button text */
 .btn {
   font-weight: 600;
@@ -1000,5 +985,502 @@ html {
   #skills,
   #tools {
     scroll-margin-top: 110px;
+  }
+}
+/* ===== SECTION TEXT FORMATTING FIXES ===== */
+
+/* Consistent section spacing */
+.section {
+  padding: 60px 0;
+  scroll-margin-top: 30px;
+}
+
+.section--compact {
+  padding: 40px 0;
+}
+
+/* Better section headings */
+.h2 {
+  font-size: 32px;
+  margin: 0 0 12px;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.subhead {
+  font-size: 16px;
+  color: var(--muted);
+  margin: 0 0 32px;
+  max-width: 700px;
+  line-height: 1.5;
+}
+
+/* Card text improvements */
+.card {
+  padding: 24px;
+}
+
+.h3 {
+  font-size: 18px;
+  margin: 0 0 12px;
+  line-height: 1.3;
+  font-weight: 700;
+}
+
+.card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+/* Better bullet lists */
+.bullets {
+  margin: 0;
+  padding-left: 20px;
+  color: var(--muted);
+  font-size: 15px;
+}
+
+.bullets li {
+  margin: 8px 0;
+  line-height: 1.5;
+}
+
+.bullets--tight li {
+  margin: 6px 0;
+}
+
+/* Process section fixes */
+#process .card {
+  padding: 24px;
+}
+
+#process .aw-process {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+#process .aw-row {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 24px;
+  align-items: start;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  padding-bottom: 20px;
+}
+
+#process .aw-row:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+#process .aw-label {
+  font-weight: 700;
+  color: var(--text);
+  font-size: 18px;
+  line-height: 1.3;
+}
+
+#process .aw-main {
+  margin: 0 0 8px 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--text);
+}
+
+#process .aw-sub {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--muted);
+  opacity: 0.9;
+}
+
+/* Ethics section fixes */
+#ethics .grid--2 {
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+#ethics .card {
+  height: 100%;
+}
+
+#ethics .h3 {
+  margin-bottom: 16px;
+  font-size: 18px;
+}
+
+#ethics .bullets {
+  margin: 0;
+}
+
+#ethics .bullets li {
+  margin: 10px 0;
+  line-height: 1.5;
+}
+
+#ethics .fineprint {
+  margin-top: 16px;
+  padding: 16px 20px;
+  background: rgba(37,99,235,0.04);
+  border-radius: 12px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--muted);
+  border-left: 3px solid var(--accent);
+}
+
+/* Pricing section fixes */
+#pricing .card--price {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+#pricing .price__top {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border);
+}
+
+#pricing .h3 {
+  font-size: 18px;
+  margin: 0;
+  line-height: 1.3;
+}
+
+#pricing .price {
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--accent);
+  white-space: nowrap;
+}
+
+#pricing .bullets {
+  flex-grow: 1;
+  margin-bottom: 20px;
+}
+
+#pricing .price__addon {
+  margin: 0 0 20px 0;
+  padding: 12px 16px;
+  background: rgba(37,99,235,0.04);
+  border-radius: 10px;
+  font-size: 14px;
+  color: var(--text);
+  border: 1px dashed var(--border);
+  text-align: center;
+}
+
+#pricing .btn--wide {
+  margin-top: auto;
+}
+
+/* Desktop improvements */
+@media screen and (min-width: 921px) {
+  /* Process section desktop */
+  #process .aw-row {
+    grid-template-columns: 160px 1fr;
+    gap: 32px;
+  }
+  
+  #process .aw-label {
+    text-align: right;
+    font-size: 18px;
+  }
+  
+  /* Ethics section desktop */
+  #ethics .grid--2 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Mobile improvements */
+@media screen and (max-width: 920px) {
+  /* Section spacing */
+  .section {
+    padding: 40px 0;
+  }
+  
+  .section--compact {
+    padding: 30px 0;
+  }
+  
+  .h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+  
+  .subhead {
+    font-size: 16px;
+    margin-bottom: 24px;
+  }
+  
+  /* Card padding */
+  .card {
+    padding: 20px;
+  }
+  
+  /* Process section mobile */
+  #process .aw-row {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    padding-bottom: 20px;
+    margin-bottom: 4px;
+  }
+  
+  #process .aw-label {
+    font-size: 20px;
+    margin-bottom: 4px;
+  }
+  
+  #process .aw-main {
+    font-size: 16px;
+  }
+  
+  #process .aw-sub {
+    font-size: 15px;
+  }
+  
+  /* Ethics section mobile */
+  #ethics .grid--2 {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  #ethics .card {
+    padding: 20px;
+  }
+  
+  #ethics .bullets li {
+    margin: 8px 0;
+  }
+  
+  #ethics .fineprint {
+    padding: 14px 16px;
+    font-size: 14px;
+  }
+  
+  /* Pricing section mobile */
+  #pricing .price__top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  
+  #pricing .price {
+    font-size: 28px;
+  }
+  
+  #pricing .price__addon {
+    padding: 10px 12px;
+    font-size: 13px;
+  }
+}
+
+/* Small mobile */
+@media screen and (max-width: 520px) {
+  .h2 {
+    font-size: 26px;
+  }
+  
+  .subhead {
+    font-size: 15px;
+  }
+  
+  .card {
+    padding: 18px;
+  }
+  
+  .bullets {
+    font-size: 14px;
+  }
+  
+  .bullets li {
+    margin: 6px 0;
+  }
+  
+  #process .aw-label {
+    font-size: 18px;
+  }
+  
+  #process .aw-main {
+    font-size: 15px;
+  }
+  
+  #process .aw-sub {
+    font-size: 14px;
+  }
+  
+  #ethics .h3 {
+    font-size: 17px;
+  }
+}
+
+/* ===== HERO HEADLINE CENTERING & FIX ===== */
+
+/* Desktop hero headline */
+@media screen and (min-width: 921px) {
+  .hero__copy {
+    max-width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .hero__copy .eyebrow {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .h1 {
+    font-size: 52px;
+    line-height: 1.2;
+    margin-bottom: 24px;
+    max-width: 100%;
+    text-align: center;
+    white-space: normal;
+    word-break: normal;
+    overflow-wrap: normal;
+  }
+  
+  .hero__copy .lead {
+    text-align: center;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .hero__buttons {
+    justify-content: center;
+  }
+  
+  .hero__copy .trust {
+    text-align: center;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .hero__grid {
+    align-items: center;
+  }
+}
+
+/* Large desktop - larger font but still wraps if needed */
+@media screen and (min-width: 1200px) {
+  .h1 {
+    font-size: 60px;
+  }
+}
+
+/* Mobile hero headline */
+@media screen and (max-width: 920px) {
+  .hero__copy {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .hero__copy .eyebrow {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .h1 {
+    text-align: center;
+    font-size: 36px !important;
+    line-height: 1.2;
+    max-width: 100%;
+    white-space: normal;
+    word-break: normal;
+  }
+  
+  .hero__copy .lead {
+    text-align: center;
+    font-size: 16px;
+  }
+  
+  .hero__buttons {
+    justify-content: center;
+  }
+  
+  .hero__copy .trust {
+    text-align: center;
+    white-space: normal;
+  }
+}
+
+/* Small mobile */
+@media screen and (max-width: 520px) {
+  .h1 {
+    font-size: 32px !important;
+  }
+}
+
+/* Extra small mobile */
+@media screen and (max-width: 380px) {
+  .h1 {
+    font-size: 28px !important;
+  }
+}
+/* Add this to the VERY END of your styles.css */
+
+/* ===== EXTREME GAP FIX ===== */
+
+/* Dramatically reduce gap between header and hero section */
+.hero {
+  padding-top: 20px !important; /* Was 70px, now minimal */
+}
+
+/* Remove any extra top padding from hero inner */
+.hero__inner {
+  padding-top: 0 !important;
+}
+
+/* Mobile - almost no gap */
+@media screen and (max-width: 920px) {
+  .hero {
+    padding-top: 5px !important; /* Barely any gap */
+  }
+  
+  main {
+    padding-top: 65px !important; /* Fine-tuned for sticky header */
+  }
+  
+  /* Ensure eyebrow doesn't add extra space */
+  .eyebrow {
+    margin-top: 0 !important;
+  }
+}
+
+/* Small mobile */
+@media screen and (max-width: 520px) {
+  .hero {
+    padding-top: 0 !important; /* Zero gap */
+  }
+  
+  main {
+    padding-top: 70px !important;
+  }
+}
+
+/* Extra small mobile */
+@media screen and (max-width: 380px) {
+  .hero {
+    padding-top: 0 !important;
+  }
+  
+  main {
+    padding-top: 75px !important;
   }
 }
